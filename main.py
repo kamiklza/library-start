@@ -40,7 +40,7 @@ def add():
         rating = request.form["rating"]
 
         book = Book(title=title, author=author, rating=rating)
-        db.session.add(Book(title=title, author=author, rating=rating))
+        db.session.add(book)
         db.session.commit()
 
         book_detail = {
